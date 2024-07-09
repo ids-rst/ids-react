@@ -1,0 +1,88 @@
+:root{
+  --color-gradient: linear-gradient(90deg, #03457F 10%, #1CA5DC 100%);
+  --hover-gradient:linear-gradient(90deg, #1CA5DC 10%, #03457F 100%);
+  --primary-color: #03457F;
+  --scendory-color:#0a0a0a;
+}
+.background-gradient{
+  background: var(--color-gradient);
+}
+.cs-btn:hover{
+  background: var(--hover-gradient);
+}
+.top_header a{
+  text-decoration: none;
+}
+.cs-navigation{
+  gap:40px;
+}
+.navbar-nav a.nav-link.active{
+  color: var(--primary-color);
+}
+a.nav-link{
+  color: var(--scendory-color);
+}
+ a.nav-link:after {
+  display:block;
+  content: '';
+  width: inherit;
+  border-bottom: solid 4px var(--primary-color);  
+  transform: scaleX(0);
+  border-radius: 4px; 
+  transition: transform 250ms ease-in-out;
+}
+a.nav-link:last-child::after{
+  display: none;
+}
+ a.nav-link:hover:after,
+ a.nav-link.active:after{ 
+  transform: scaleX(1); 
+}
+
+/** slider **/
+.carousel-item{
+  background: var(--color-gradient);
+  /* height: 100vh; */
+}
+.carousel-indicators{
+  display: none;
+}
+/** slider end **/
+.sub_text{
+  margin: 0 0 10px;
+  line-height: 28px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+.title{
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.cs_description{
+  font-size: 18px;
+  line-height: 31px;
+  font-weight: 400;
+}
+.middle-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.middle-img img{
+  width: 650px;
+}
+.dance3 {
+  -webkit-animation: dance3 8s alternate infinite;
+}
+
+@keyframes dance3 {
+  0% {
+      -webkit-transform: scale(0.8);
+  }
+  100% {
+      -webkit-transform: scale(1);
+  }
+}
